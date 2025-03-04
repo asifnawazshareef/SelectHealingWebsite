@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
-import { FallingLines } from "react-loader-spinner";
-const LoaderModal = ({ isOpenLoader, openModalLoader, closeModalLoader }) => {
-  const isDarkmode = useSelector((state) => state.darkmode.isDarkmode);
+import { ClipLoader } from "react-spinners";
+
+const LoaderModal = ({ isOpenLoader }) => {
   return (
     <div>
       {isOpenLoader && (
@@ -14,17 +14,11 @@ const LoaderModal = ({ isOpenLoader, openModalLoader, closeModalLoader }) => {
         >
           <div className="relative p-4 w-full max-w-lg max-h-full">
             <div
-              className={`relative flex justify-center items-center ${
-                isDarkmode ? "bg-black text-white " : " bg-white "
-              }  rounded-lg shadow dark:bg-gray-700`}
+              className={`relative flex justify-center items-center 
+            
+               rounded-lg shadow `}
             >
-              {" "}
-              <FallingLines
-                color="#4fa94d"
-                width="100"
-                visible={true}
-                ariaLabel="falling-circles-loading"
-              />
+              <ClipLoader color="#4fa94d" size={50} />
             </div>
           </div>
         </div>

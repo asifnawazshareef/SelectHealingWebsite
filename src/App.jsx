@@ -27,10 +27,10 @@ import PodcastDetails from "./Pages/PodcastDetails";
 import AddCommunity from "./Pages/AddCommunity";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { LoginForm } from "./Pages/LoginForm";
 import CommunityDetails from "./Pages/CommunityDetails";
 import AddOfferByCourse from "./Pages/AddOfferByCourse";
 import AddOffer from "./Pages/AddOffer";
+import LoginForm from "./Pages/LoginForm";
 const App = () => {
   const router = createBrowserRouter([
     {
